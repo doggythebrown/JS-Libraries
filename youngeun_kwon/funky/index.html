@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>JS Libraries</title>
+
+    <!-- css reset -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
+    <!-- external css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <!-- glide.js css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- leaflet.js-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- header section -->
+    <header class="custom-header">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="L'Azur Tours logo. pink gradient background with a stylized pink airplane landing icon, featuring a tilted plane shape above a horizontal bar.">
+            <p>L'Azur Tours</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#best-destinations">Destinations</a></li>
+                <li><a href="#europe-flight-deals">Special Deals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+        <!-- Canvas element for animated gradient background -->
+        <canvas id="hero-gradient"></canvas>
+        <!-- Glide.js container for the hero section slider -->
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <img src="assets/images/main.jpg" alt="a digitally edited travel-themed image featuring a young woman with brown hair, wearing a white t-shirt and blue jeans, sitting barefoot on green grass while leaning on an orange suitcase. she is taking a selfie with a smartphone, smiling. behind her is a surreal composition of famous landmarks including the statue of liberty, big ben, the taj mahal, saint basil's cathedral, the leaning tower of pisa, and the eiffel tower, all appearing close together against a clear blue sky.">
+                        <div class="hero-content">
+                            <h1>Welcome to L'Azur Tours</h1>
+                            <p>Explore the world with us</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="assets/images/london.jpg" alt="a scenic view of big ben and the houses of parliament in london during sunset, with the sun casting a golden glow over the sky and reflecting on the river thames. westminster bridge extends across the river with its green arches and ornate lampposts, while the sky is filled with soft, scattered clouds illuminated by the warm hues of the setting sun.">
+                        <div class="hero-content">
+                            <h1>London</h1>
+                            <p>The heart of England</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="assets/images/paris.jpg" alt="a view of pont alexandre iii in paris during sunset, featuring ornate street lamps lining the bridge and a gilded statue of a winged horse atop a decorative column. in the background, les invalides with its golden dome stands against a pastel-colored sky with hues of pink and orange. the bridge is busy with cars and pedestrians, capturing the elegance of parisian architecture and atmosphere.">
+                        <div class="hero-content">
+                            <h1>Paris</h1>
+                            <p>City of Lights & Love</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="assets/images/rome.jpg" alt="a stunning view of the colosseum in rome, italy, with its ancient stone arches partially ruined yet standing tall under a dramatic sky with wispy clouds and a crescent moon. tourists gather around the historic amphitheater, walking along the pathways and admiring the iconic landmark. the warm sunlight highlights the earthy tones of the structure, contrasting with the deep blue sky.">
+                        <div class="hero-content">
+                            <h1>Rome</h1>
+                            <p>Experience ancient history</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Navigation dots added -->
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- best travel packages section -->
+    <!-- applying aos animations and masonry layout -->
+    <section id="best-destinations" class="best-destinations">
+        <h2>Best Travel Packages</h2>
+        <div class="grid">
+            <div class="card" data-aos="fade-up">
+                <img src="/assets/images/paris.jpg" alt="a view of pont alexandre iii in paris during sunset, featuring ornate street lamps lining the bridge and a gilded statue of a winged horse atop a decorative column. in the background, les invalides with its golden dome stands against a pastel-colored sky with hues of pink and orange. the bridge is busy with cars and pedestrians, capturing the elegance of parisian architecture and atmosphere.">
+                <div class="card-content">
+                    <h3>Classic Europe Tour</h3>
+                    <h4>London, Paris, Rome, Barcelona</h4>
+                    <p>Visit Europe’s top cities with a mix of guided tours and free time.</p>
+
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <img src="/assets/images/italy.jpg" alt="a picturesque view of manarola, one of the five villages of cinque terre in italy, with colorful pastel buildings stacked on a steep cliff overlooking the deep blue ligurian sea. waves crash against the rugged rocky shoreline, while a small harbor with boats and stone archways sits at the base of the village. the background features green terraced hills and a bright sky with scattered white clouds.">
+                <div class="card-content">
+                    <h3>Romantic France & Italy</h3>
+                    <h4>Paris, Nice, Florence, Venice, Rome</h4>
+                    <p>A dreamy escape through France and Italy’s most romantic spots.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <img src="/assets/images/aurora.jpg" alt="a breathtaking view of the northern lights dancing across the night sky in shades of green and purple above a snow-covered mountain range. the aurora borealis reflects on the calm waters of a river, surrounded by dark silhouettes of evergreen trees. the starry sky adds to the magical atmosphere of the scene.">
+                <div class="card-content">
+                    <h3>Northern Lights & Nordic Adventure</h3>
+                    <h4>Norway, Sweden, Finland</h4>
+                    <p>See the Northern Lights and explore breathtaking Nordic landscapes.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <img src="/assets/images/budapest.jpg" alt="a stunning night view of rome with the illuminated st. peter's basilica standing against a deep blue twilight sky. the ponte sant’angelo bridge, adorned with golden lights, spans the tiber river, creating a beautiful reflection on the calm water. lush green trees frame the scene, adding to the romantic ambiance of the historic cityscape.">
+                <div class="card-content">
+                    <h3>Hidden Gems of Eastern Europe</h3>
+                    <h4>Prague, Vienna, Budapest</h4>
+                    <p>Discover stunning architecture, rich history, and charming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- recommended travel destinations section -->
+    <!-- applying aos animations and masonry layout -->
+    <section class="best-destinations">
+        <h2>Recommended Travel Destinations</h2>
+        <div class="grid">
+            <div class="card" data-aos="fade-up">
+                <img src="/assets/images/london.jpg" alt="a scenic view of big ben and the houses of parliament in london during sunset, with the sun casting a golden glow over the sky and reflecting on the river thames. westminster bridge extends across the river with its green arches and ornate lampposts, while the sky is filled with soft, scattered clouds illuminated by the warm hues of the setting sun.">
+                <div class="card-content">
+                    <h3>London</h3>
+                    <p>Where Tradition Meets Modernity. See Buckingham Palace, Tower Bridge, and the London Eye. Walk through historic streets, visit world-class museums, and enjoy afternoon tea.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <img src="/assets/images/paris.jpg" alt="a view of pont alexandre iii in paris during sunset, featuring ornate street lamps lining the bridge and a gilded statue of a winged horse atop a decorative column. in the background, les invalides with its golden dome stands against a pastel-colored sky with hues of pink and orange. the bridge is busy with cars and pedestrians, capturing the elegance of parisian architecture and atmosphere.">
+                <div class="card-content">
+                    <h3>Paris</h3>
+                    <p>The City of Love and Art. Visit the Eiffel Tower, Louvre, and enjoy French cuisine. Stroll along the Seine, explore charming cafés, and experience the magic of Montmartre.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <img src="/assets/images/rome.jpg" alt="a stunning view of the colosseum in rome, italy, with its ancient stone arches partially ruined yet standing tall under a dramatic sky with wispy clouds and a crescent moon. tourists gather around the historic amphitheater, walking along the pathways and admiring the iconic landmark. the warm sunlight highlights the earthy tones of the structure, contrasting with the deep blue sky.">
+                <div class="card-content">
+                    <h3>Rome</h3>
+                    <p>A Living Museum of History. Explore the Colosseum, Vatican City, and ancient ruins. Wander through charming piazzas, toss a coin in Trevi Fountain, and savor authentic Italian pasta.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/images/Prague.jpg" alt="a row of ornate historic buildings in prague, czech republic, featuring intricate facades, decorative balconies, and red-tiled roofs under a clear blue sky. the buildings display a mix of cream, beige, and yellow hues, with some topped with dark spires and domes, reflecting the city's rich architectural heritage.">
+                <div class="card-content">
+                    <h3>Prague</h3>
+                    <p>The Fairytale City of Eastern Europe. Walk through medieval streets and admire Prague Castle. Cross the iconic Charles Bridge, visit the Astronomical Clock, and enjoy a scenic river cruise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- europe special flight deals section -->
+    <section id="europe-flight-deals">
+        <h2>Europe Special Flight Deals</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Departure</th>
+                    <th>Season</th>
+                    <th>Departure Dates</th>
+                    <th>Lowest Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="/assets/images/aircanadalogo.png" alt="air canada logo featuring a red maple leaf enclosed within a circular outline, with the words 'air canada' written in bold uppercase red letters below." class="flag-image">
+                        Toronto (Round-trip)
+                    </td>
+                    <td>Low Season</td>
+                    <td>[120+ days after ticketing] Sep 1 - Dec 9</td>
+                    <td>C$1335</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/assets/images/aircanadalogo.png" alt="air canada logo featuring a red maple leaf enclosed within a circular outline, with the words 'air canada' written in bold uppercase red letters below." class="flag-image">
+                        Toronto (Round-trip)
+                    </td>
+                    <td>Shoulder Season</td>
+                    <td>[120+ days after ticketing] Jul 12 - Jul 31, Aug 21 - Aug 31</td>
+                    <td>C$1420</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/assets/images/aircanadalogo.png" alt="air canada logo featuring a red maple leaf enclosed within a circular outline, with the words 'air canada' written in bold uppercase red letters below." class="flag-image">
+                        Toronto (Round-trip)
+                    </td>
+                    <td>Low Season</td>
+                    <td>[120+ days after ticketing] Jul 6 - Jul 11, Aug 1 - Aug 20</td>
+                    <td>C$1505</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/assets/images/Lufthansa-logo.png" alt="lufthansa logo featuring a stylized dark blue crane in flight enclosed within a circular outline, set against a white background." class="flag-image">
+                        Vancouver (Round-trip)
+                    </td>
+                    <td>Low Season</td>
+                    <td>Mar 1 - Apr 30</td>
+                    <td>C$1989</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/assets/images/Lufthansa-logo.png" alt="lufthansa logo featuring a stylized dark blue crane in flight enclosed within a circular outline, set against a white background." class="flag-image">
+                        Vancouver (Round-trip)
+                    </td>
+                    <td>Shoulder Season</td>
+                    <td>May 1 - Jun 21, Jul 12 - Jul 31, Aug 21 - Aug 31</td>
+                    <td>C$2150</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/assets/images/Lufthansa-logo.png" alt="lufthansa logo featuring a stylized dark blue crane in flight enclosed within a circular outline, set against a white background." class="flag-image">
+                        Vancouver (Round-trip)
+                    </td>
+                    <td>Peak Season</td>
+                    <td>Jun 22 - Jul 11, Dec 10 - Dec 23</td>
+                    <td>C$2371</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    
+    
+    <!-- section displaying world travel destinations with an interactive map -->
+    <section class="map-section">
+        <h2>World Travel Destinations</h2>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </section>
+    
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- left: logo -->
+            <div class="footer-logo">
+                <img src="/assets/images/logo.png" alt="L'Azur tours logo. pink gradient background with a stylized pink airplane landing icon, featuring a tilted plane shape above a horizontal bar.">
+            </div>
+    
+            <!-- center: contact information -->
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i>  Main: 416-736-5335</p>
+                <p><i class="fas fa-phone"></i> Toll-Free (North America): 1-416-736-5335</p>
+                <p><i class="fab fa-whatsapp"></i> What's app: L'Azur Tours</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="yoboto.canada@gmail.com">info@plazur.com</a></p>
+            </div>
+    
+            <!-- right: business hours -->
+            <div class="footer-hours">
+                <h3>Business Hours</h3>
+                <p><i class="fas fa-clock"></i> Open 365 Days</p>
+                <p>Weekdays | 08:00 - 20:00</p>
+                <p>Weekends & Holidays | 09:00 - 18:00</p>
+                <h4>[Temporary Business Hours]</h4>
+                <p>Mon - Sat | 09:00 - 18:00</p>
+                <p>Sunday Closed</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- including various third-party javascript libraries -->
+    <!-- glide.js js -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <!-- granim.js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+    <!-- aos animation script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- masonry layout script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <!-- Anime.js script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Leaflet.js script -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- main javascript file for handling site interactions -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
